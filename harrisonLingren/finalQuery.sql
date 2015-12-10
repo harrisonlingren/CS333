@@ -20,4 +20,4 @@ use harrisonLingren
 	) as F
 	
 	where E.Unique_carrier = F.Unique_carrier
-	order by PERCENT_BAD_AIRPORTS desc;
+	order by percentageDelays desc;
