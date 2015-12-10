@@ -11,8 +11,7 @@ use harrisonLingren
 			) as A, (
 				select Unique_carrier, Dest_airport_id, avg(cast(Arr_delay_new as float)) as avg4 
 				from Flight_info as B group by Unique_carrier, Dest_airport_id
-			) as C
-				where C.avg4 > A.avg3
+			) as C where C.avg4 > A.avg3
 		) as D group by Unique_carrier
 	) as E, (
 		select Unique_carrier, count(distinct Dest_airport_id) as Num_airports 
