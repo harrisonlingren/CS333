@@ -1,6 +1,6 @@
 use harrisonLingren
 
-	select E.Unique_carrier, ((cast(E.avg1 as float) / cast(F.Num_airports as float)) * 100) as PERCENT_BAD_AIRPORTS
+	select E.Unique_carrier, ((cast(E.avg1 as float) / cast(F.Num_airports as float)) * 100) as percentageDelays
 	from (
 		select D.Unique_carrier, count(D.Unique_carrier) as avg1 
 		from (
